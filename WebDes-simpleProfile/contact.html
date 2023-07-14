@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Rafi Shidiq - TP1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    
+    <div class="main-container">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="wrapper">
+                <div class="logo"><a href="index.html"><img src="assets/microsoft-logo-png-2407.png" alt=""></a></div>
+            </div>
+            
+        </div>
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="wrapper">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="wrapper">
+                <div class="flexwrap">
+                    <div class="container-left">
+                        <div class="box box1">
+                            <h2>Contact</h2>
+                            <form name="valid" action="" method="post"  onsubmit="return validateForm()" autocomplete="off">
+                                <div class="form">
+                                    <label for="name">Nama*</label><br>
+                                    <input type="text" value="" name="val" id="name" placeholder="Masukkan Nama" required>
+                                </div>
+                                <div class="form">
+                                    <label for="email">Email*</label><br>
+                                    <input type="text" value="" name="val" id="email" placeholder="Masukkan Email" required>
+                                </div>
+                                <div class="form">
+                                    <label for="subject">Subjek*</label><br>
+                                    <input type="text" value="" name="val" id="subject" placeholder="Masukkan Subjek" required>
+                                </div>
+                                <div class="form">
+                                    <label for="message">Pesan*</label><br>
+                                    <input type="text" value="" name="val" id="message" placeholder="Masukkan Pesan" required>
+                                </div>
+                                <div class="form">
+                                    <button>Kirim Pesan</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="container-right">
+                        <div class="box box2">
+                            <div class="picture">
+                                <img src="assets/foto2.jpg" alt="">
+                            </div>
+                            <div class="data">
+                                <div class="l-data">
+                                    <ul>
+                                        <li>NIM</li>
+                                        <li>Nama</li>
+                                        <li>Kelas</li>
+                                        <li>Prodi</li>
+                                    </ul>
+                                </div>
+                                <div class="m-data">
+                                    <ul>
+                                        <li>:</li>
+                                        <li>:</li>
+                                        <li>:</li>
+                                        <li>:</li>
+                                    </ul>
+                                </div>
+                                <div class="r-data">
+                                    <ul>
+                                        <li>2004222</li>
+                                        <li>Muhammad Rafi Shidiq</li>
+                                        <li>Ilkom C1</li>
+                                        <li>Ilmu Komputer</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="wrapper">
+                <h5>2022 | Muhammad Rafi Shidiq | 2004222</h5>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+<script>
+    function validateForm() {
+        let x = document.forms["valid"]["val"].value;
+        if (x == "") {
+            alert("Name must be filled out");
+            return false;
+        }
+    }
+</script>
+</html>

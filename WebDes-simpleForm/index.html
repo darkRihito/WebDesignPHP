@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TP3</title>
+        <!-- Bootsrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <!-- CSS -->
+        <style>
+            #myc {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container border" id="myc">
+            <h1 class="text-center mt-4">BIODATA</h1>
+            <!-- Form -->
+            <form class="m-4">
+                <!-- Nama -->
+                <div class="mb-3">
+                    <label class="form-label">Nama Lengkap</label>
+                    <input type="text" id="nama" class="form-control">
+                </div>
+                <!-- Tanggal Lahir -->
+                <div class="mt-3">
+                    <label class="form-label">Tanggal Lahir</label>
+                </div>
+                <div class="form-group">
+                    <input type="date" class="form-control" id="lahir" aria-describedby="emailHelp" >
+                </div>
+                <!-- Jenis Kelamin -->
+                <div class="mt-3">
+                    <label class="form-label">Jenis Kelamin</label>
+                </div>
+                <div class="form-check form-check-inline" id="jkel">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Laki-laki">
+                    <label class="form-check-label" for="inlineRadio1">Laki-laki</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Perempuan">
+                    <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                    <label class="form-check-label" for="inlineRadio3">Other (disabled)</label>
+                </div>
+                
+                <!-- Hobi -->
+                <div class="mt-3">
+                    <label class="form-label">Hobi</label>
+                </div>
+                <div class="form-check form-check-inline" id="hobi">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Ngoding" name="hobi">
+                    <label class="form-check-label" for="inlineCheckbox1">Ngoding</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Rebahan" name="hobi">
+                    <label class="form-check-label" for="inlineCheckbox2">Rebahan</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Melamun" name="hobi">
+                    <label class="form-check-label" for="inlineCheckbox3">Melamun</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="Baca Buku" name="hobi">
+                    <label class="form-check-label" for="inlineCheckbox4">Baca Buku</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="Nonton Youtube" name="hobi">
+                    <label class="form-check-label" for="inlineCheckbox5">Nonton Youtube</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="Dengerin Lagu" name="hobi">
+                    <label class="form-check-label" for="inlineCheckbox6">Dengerin Lagu</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="Other" name="hobi">
+                    <label class="form-check-label" for="inlineCheckbox7">Other</label>
+                  </div>
+                  <!-- Agama -->
+                  <div class="mt-3">
+                    <label class="form-label">Agama</label>
+                    </div>
+                  <select class="form-select" id="agama" aria-label="Default select example">
+                    <option value="" selected>Open this select menu</option>
+                    <option value="Islam">Islam</option>
+                    <option value="Kristen">Kristen</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Budha">Budha</option>
+                    <option value="Kanghucu">Kanghucu</option>
+                    <option value="Satanis">Satanis</option>
+                  </select>
+                  <!-- Pesan -->
+                  <div class="mt-3">
+                    <label class="form-label">Pesan</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="pesan" rows="3"></textarea>
+                      </div>
+                  <!-- Submit -->
+                  <button type="button" onclick="Submit()" class="btn btn-primary mt-4" id="button">Submit</button>
+                  <!-- Table -->
+                  <table class="table mt-4 d-none" id="table">
+                    <thead>
+                      <tr>
+                        <th style="width: 20%" scope="col">Label</th>
+                        <th scope="col">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Nama</th>
+                        <td id="tnama">a</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Tanggal Lahir</th>
+                        <td id="ttgl">b</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Jenis Kelamin</th>
+                        <td id="tjkel">c</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Hobi</th>
+                        <td id="thobi">d</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Agama</th>
+                        <td id="tagama">e</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Pesan</th>
+                        <td id="tpesan">f</td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </form>
+        </div>
+    </body>
+
+    <script src="script.js"></script>
+    <!-- Bootsrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</html>
